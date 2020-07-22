@@ -28,8 +28,8 @@ systemctl enable --now chronyd.service
 
 # Base OS update
 echo "- Update OS -"
-yum -yqe 3 update
+yum -y -q -e 3 update
 echo "- Install Tools -"
-yum -yqe 3 install net-tools bind-utils wget tree
+yum -y -q -e 3 install net-tools bind-utils wget tree
 
 echo "---- CentOS Base Setup Complete ----"; echo ""
