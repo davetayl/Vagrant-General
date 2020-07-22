@@ -18,14 +18,13 @@ else
 	echo "- Internet Failed! -"
 fi
 
-
 # Sync clock
 echo "- Sync Clock -"
-cat >> /etc/ntp.conf <<EOF
+cat >> /etc/chrony.conf <<EOF
 server 0.au.pool.ntp.org
 EOF
 
-systemctl enable --now ntpd.service
+systemctl enable --now chronyd.service
 
 # Base OS update
 echo "- Update OS -"
