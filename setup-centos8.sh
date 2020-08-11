@@ -29,6 +29,7 @@ systemctl enable --now chronyd.service
 
 # Base OS update
 echo "- Update OS -"
+dnf clean packages
 dnf -yqe 3 update
 echo "- Install Tools -"
 dnf -yqe 3 install net-tools bind-utils wget tree
