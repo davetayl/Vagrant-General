@@ -28,6 +28,7 @@ EOF
 systemctl enable --now chronyd.service
 
 echo "- Install Tools -"
+dnf clean packages
 dnf -yqe 3 install net-tools bind-utils wget tree
 
 echo "---- CentOS Base Setup Complete ----"; echo ""
